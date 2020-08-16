@@ -14,4 +14,19 @@
         Prevention
     </string>
     <string name="treatment_title">Treatment</string>
+    <string name="patient_data_title">Patient Data</string>
+    <string name="age_text">Age</string>
+    <string name="gender">Gender</string>
+    <string name="locality">Locality</string>
+    <string name="illness_duration">Illness Duration</string>
+    <string name="other_diseases_text">Any other pre-existing condition(s)</string>
+    <string name="diabetes">Diabetes</string>
+    <string name="hypertension">Hypertension</string>
+    <string name="cancer">Cancer</string>
+    <string name="blood_disorders_text">Blood disorders like sickle cell, hemophilia</string>
+
+    <string-array name="gender_array">
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
 </resources>
