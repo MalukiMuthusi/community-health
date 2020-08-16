@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/geoCategoryFragment">
+
+    <fragment
+        android:id="@+id/geoCategoryFragment"
+        android:name="codes.malukimuthusi.commhealth.geoCategory.GeoCategoryFragment"
+        android:label="geo_category_fragment"
+        tools:layout="@layout/geo_category_fragment" >
+        <action
+            android:id="@+id/action_geoCategoryFragment_to_diseaseFragment"
+            app:destination="@id/diseaseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/diseaseFragment"
+        android:name="codes.malukimuthusi.commhealth.diseaseView.DiseaseFragment"
+        android:label="disease_fragment"
+        tools:layout="@layout/disease_fragment" />
+</navigation>
