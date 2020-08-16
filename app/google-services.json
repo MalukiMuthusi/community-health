@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "570355836210",
+    "firebase_url": "https://one-health-app.firebaseio.com",
+    "project_id": "one-health-app",
+    "storage_bucket": "one-health-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:570355836210:android:bee2355e99daf07142a32b",
+        "android_client_info": {
+          "package_name": "codes.malukimuthusi.commhealth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "570355836210-7hfjd1jfvb5l3akrbdsn0a9bscc8h256.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "codes.malukimuthusi.commhealth",
+            "certificate_hash": "bfac85a1331612a33e1955fe738b654ef2b02978"
+          }
+        },
+        {
+          "client_id": "570355836210-7i0f5fel0as8peucqs3ja0rvk1mfm3oa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB03qOmqiIkAvUscKlxvp1J7EXwsVLGRvQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "570355836210-7i0f5fel0as8peucqs3ja0rvk1mfm3oa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

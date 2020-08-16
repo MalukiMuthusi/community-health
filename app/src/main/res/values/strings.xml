@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">commhealth</string>
+    <string name="select_geolocation_category">Select Geolocation</string>
+    <string name="national_disease_burden">National Disease Burden</string>
+    <string name="regional_disease_burden">Regional Disease Burden</string>
+    <string name="disease_name">Disease Name</string>
+    <string name="symptoms">Symptoms</string>
+
+    <string name="lorem_ipsulum_text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in congue magna. Duis eu posuere nisi. Suspendisse dapibus ex id sapien dapibus semper. Etiam venenatis quis libero a euismod. Sed viverra dictum erat, ut ornare ante cursus nec. Aenean ornare dui ipsum, non facilisis nulla hendrerit sed. Nulla malesuada odio sem, non tempor lacus eleifend id. Nunc non lacus nisl. Praesent pharetra, neque nec suscipit semper, quam tortor iaculis odio, eget accumsan risus sapien vitae nunc. Suspendisse facilisis mauris tristique, dignissim lorem vitae, dictum libero. Praesent consectetur neque a consequat laoreet.
+
+    </string>
+    <string name="prevention_title_text">
+        Prevention
+    </string>
+    <string name="treatment_title">Treatment</string>
 </resources>
