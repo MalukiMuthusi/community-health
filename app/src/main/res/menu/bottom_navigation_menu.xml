@@ -2,22 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/item_activity"
+        android:id="@+id/recentActivityFragment"
         android:icon="@drawable/ic_baseline_local_activity_24"
         android:title="@string/activity" />
 
     <item
-        android:id="@+id/item_disease"
+        android:id="@+id/geoCategoryFragment"
         android:icon="@drawable/ic_coronavirus_24px"
         android:title="@string/diseases" />
 
     <item
-        android:id="@+id/item_data_input"
+        android:id="@+id/basicFormFragment"
         android:icon="@drawable/ic_baseline_notes_24"
         android:title="@string/data_input" />
 
     <item
-        android:id="@+id/item_call"
+        android:id="@+id/callHelpFragment"
         android:icon="@drawable/ic_baseline_call_24"
         android:title="@string/call" />
 
