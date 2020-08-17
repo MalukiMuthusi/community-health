@@ -14,20 +14,23 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.bottomNavigation.selectedItemId = R.id.item_data_input
+        binding.bottomNavigation.setupWithNavController(findNavController(R.id.fragment))
+
+        binding.bottomNavigation.selectedItemId = R.id.basicFormFragment
 
         BottomNavigationView.OnNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.item_activity -> {
+                R.id.recentActivityFragment -> {
                     true
                 }
-                R.id.item_call -> {
+                R.id.callHelpFragment -> {
                     true
                 }
-                R.id.item_disease -> {
+                R.id.geoCategoryFragment -> {
                     true
                 }
-                R.id.item_data_input -> {
+                R.id.basicFormFragment -> {
+//                    findNavController(R.id.fragment).navigate()
                     true
                 }
                 else -> false
@@ -36,16 +39,16 @@ class MainActivity : AppCompatActivity() {
 
         binding.bottomNavigation.setOnNavigationItemReselectedListener {
             when (it.itemId) {
-                R.id.item_activity -> {
+                R.id.recentActivityFragment -> {
                     true
                 }
-                R.id.item_call -> {
+                R.id.callHelpFragment -> {
                     true
                 }
-                R.id.item_disease -> {
+                R.id.geoCategoryFragment -> {
                     true
                 }
-                R.id.item_data_input -> {
+                R.id.basicFormFragment -> {
                     true
                 }
             }
