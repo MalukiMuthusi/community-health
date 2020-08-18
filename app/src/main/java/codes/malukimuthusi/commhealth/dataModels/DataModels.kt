@@ -9,3 +9,8 @@ data class Disease(
     val treatment: String? = "",
     val url: String? = ""
 )
+
+data class PhoneNumbers(
+    val name: String? = "",
+    val number: String? = ""
+)

@@ -28,6 +28,7 @@
     <string name="diseases">Diseases</string>
     <string name="data_input">Data Input</string>
     <string name="call">Call</string>
+    <string name="nyeri_referral_hospital">Nyeri Referral Hospital</string>
 
     <string-array name="gender_array">
         <item>Female</item>
