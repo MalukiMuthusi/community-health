@@ -11,8 +11,8 @@
         android:label="geo_category_fragment"
         tools:layout="@layout/geo_category_fragment" >
         <action
-            android:id="@+id/action_geoCategoryFragment_to_diseaseFragment"
-            app:destination="@id/diseaseFragment" />
+            android:id="@+id/action_geoCategoryFragment_to_nationalDiseaseBurdenListFragment"
+            app:destination="@id/nationalDiseaseBurdenListFragment" />
     </fragment>
     <fragment
         android:id="@+id/diseaseFragment"
@@ -34,4 +34,13 @@
         android:name="codes.malukimuthusi.commhealth.recentActivity.RecentActivityFragment"
         android:label="recent_activity_fragment"
         tools:layout="@layout/recent_activity_fragment" />
+    <fragment
+        android:id="@+id/nationalDiseaseBurdenListFragment"
+        android:name="codes.malukimuthusi.commhealth.nationalDiseaseBurdenList.NationalDiseaseBurdenListFragment"
+        android:label="national_disease_burden_list_fragment"
+        tools:layout="@layout/national_disease_burden_list_fragment" >
+        <action
+            android:id="@+id/action_nationalDiseaseBurdenListFragment_to_diseaseFragment"
+            app:destination="@id/diseaseFragment" />
+    </fragment>
 </navigation>
