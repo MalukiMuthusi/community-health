@@ -6,13 +6,13 @@
 
         <variable
             name="disease"
-            type="String" />
+            type="codes.malukimuthusi.commhealth.dataModels.Disease" />
 
     </data>
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
@@ -26,8 +26,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_8dp"
-                android:text="@{disease}"
+                android:text="@{disease.name}"
                 android:textAlignment="center"
+                android:textAllCaps="true"
                 tools:text="Corona Virus" />
 
         </com.google.android.material.card.MaterialCardView>

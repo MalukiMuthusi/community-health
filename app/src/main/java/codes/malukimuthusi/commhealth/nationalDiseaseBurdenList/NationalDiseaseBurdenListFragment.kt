@@ -54,7 +54,7 @@ class NationalDiseaseBurdenListFragment : Fragment() {
                 position: Int,
                 model: Disease
             ) {
-                model.name?.let { holder.bind(it) }
+                holder.bind(model)
 
             }
         }
