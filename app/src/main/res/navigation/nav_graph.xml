@@ -23,7 +23,11 @@
         android:id="@+id/basicFormFragment"
         android:name="codes.malukimuthusi.commhealth.dataInput.BasicFormFragment"
         android:label="basic_form_fragment"
-        tools:layout="@layout/basic_form_fragment" />
+        tools:layout="@layout/basic_form_fragment" >
+        <action
+            android:id="@+id/action_basicFormFragment_self"
+            app:destination="@id/basicFormFragment" />
+    </fragment>
     <fragment
         android:id="@+id/callHelpFragment"
         android:name="codes.malukimuthusi.commhealth.call.CallHelpFragment"
