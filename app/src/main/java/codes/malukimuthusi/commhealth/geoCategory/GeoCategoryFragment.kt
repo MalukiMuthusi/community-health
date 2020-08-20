@@ -27,7 +27,7 @@ class GeoCategoryFragment : Fragment() {
         binding = GeoCategoryFragmentBinding.inflate(inflater, container, false)
 
         binding.nationalSelectButton.setOnClickListener {
-            findNavController().navigate(GeoCategoryFragmentDirections.actionGeoCategoryFragmentToDiseaseFragment())
+            findNavController().navigate(GeoCategoryFragmentDirections.actionGeoCategoryFragmentToNationalDiseaseBurdenListFragment())
         }
         return binding.root
     }

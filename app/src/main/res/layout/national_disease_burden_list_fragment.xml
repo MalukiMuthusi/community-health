@@ -4,21 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".call.CallHelpFragment">
+    tools:context=".nationalDiseaseBurdenList.NationalDiseaseBurdenListFragment">
 
     <TextView
-        android:id="@+id/page_title"
+        android:id="@+id/title"
         style="@style/TextAppearance.MaterialComponents.Headline4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_8dp"
-        android:text="Help Lines"
-        android:textAlignment="center"
-        android:textAllCaps="true" />
+        android:text="Top National Disease Burden"
+        android:textAlignment="center" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/phone_number_single_layout" />
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/national_disease_burden_single_item" />
 </LinearLayout>
