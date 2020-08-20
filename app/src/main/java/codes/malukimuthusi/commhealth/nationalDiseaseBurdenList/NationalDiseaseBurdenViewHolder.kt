@@ -11,10 +11,11 @@ class NationalDiseaseBurdenViewHolder private constructor(
     private val binding: NationalDiseaseBurdenSingleItemBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(diseaseName: Disease) {
+    fun bind(diseaseName: Disease, viewModel: NationalDiseaseBurdenListViewModel) {
         binding.disease = diseaseName
 
         binding.diseaseName.setOnClickListener {
+            viewModel.clickedDiseasedRef = diseaseName.diseaseReference
             binding.root.findNavController()
                 .navigate(NationalDiseaseBurdenListFragmentDirections.actionNationalDiseaseBurdenListFragmentToDiseaseFragment())
         }
