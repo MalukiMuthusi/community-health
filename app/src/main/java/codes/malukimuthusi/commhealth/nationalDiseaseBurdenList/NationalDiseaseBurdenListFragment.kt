@@ -5,11 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import codes.malukimuthusi.commhealth.dataModels.Disease
 import codes.malukimuthusi.commhealth.databinding.NationalDiseaseBurdenListFragmentBinding
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
+import com.firebase.ui.firestore.SnapshotParser
+import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 
 class NationalDiseaseBurdenListFragment : Fragment() {
@@ -19,7 +22,7 @@ class NationalDiseaseBurdenListFragment : Fragment() {
             NationalDiseaseBurdenListFragment()
     }
 
-    private lateinit var viewModel: NationalDiseaseBurdenListViewModel
+    private val viewModel: NationalDiseaseBurdenListViewModel by activityViewModels()
     private lateinit var binding: NationalDiseaseBurdenListFragmentBinding
     lateinit var db: FirebaseFirestore
 
@@ -34,7 +37,17 @@ class NationalDiseaseBurdenListFragment : Fragment() {
             .limit(50)
 
         val firestoreRecyclerOptions = FirestoreRecyclerOptions.Builder<Disease>()
-            .setQuery(query, Disease::class.java)
+            .setQuery(query, object : SnapshotParser<Disease> {
+
+                override fun parseSnapshot(snapshot: DocumentSnapshot): Disease {
+                    val disease = snapshot.toObject(Disease::class.java)
+                    if (disease != null) {
+                        disease.diseaseReference = snapshot.reference
+                        return disease
+                    }
+                    return Disease()
+                }
+            })
             .setLifecycleOwner(this)
             .build()
 
@@ -54,7 +67,7 @@ class NationalDiseaseBurdenListFragment : Fragment() {
                 position: Int,
                 model: Disease
             ) {
-                holder.bind(model)
+                holder.bind(model, viewModel)
 
             }
         }
