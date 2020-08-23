@@ -168,13 +168,31 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/margin_8dp"
-                    android:hint="Others"
+                    android:hint="@string/others"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/other_blood_disorders">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/others_input_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textLongMessage" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/notes_text_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_8dp"
+                    android:hint="@string/notes"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/others_text_layout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/notes_input_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textLongMessage" />

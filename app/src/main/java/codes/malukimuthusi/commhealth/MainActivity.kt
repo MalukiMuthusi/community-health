@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import codes.malukimuthusi.commhealth.databinding.ActivityMainBinding
@@ -24,8 +25,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.bottomNavigation.setupWithNavController(findNavController(R.id.fragment))
-
-        binding.bottomNavigation.selectedItemId = R.id.basicFormFragment
 
         auth = FirebaseAuth.getInstance()
 
@@ -86,7 +85,7 @@ class MainActivity : AppCompatActivity() {
                             AuthUI.IdpConfig.EmailBuilder().build(),
                             AuthUI.IdpConfig.PhoneBuilder()
                                 .setWhitelistedCountries(listOf("+254"))
-                                .setDefaultNumber("ke", "01508577")
+                                .setDefaultNumber("ke", "0790497466")
                                 .build()
                         )
                     ).build(),
@@ -103,11 +102,13 @@ class MainActivity : AppCompatActivity() {
             val response = IdpResponse.fromResultIntent(data)
 
             if (resultCode == Activity.RESULT_OK) {
-
+                // show login success message
+                Toast.makeText(this, "You are logged in", Toast.LENGTH_SHORT).show()
 
             } else {
                 if (response == null) {
                     // user cancelled
+                    Toast.makeText(this, "Failed to Log In", Toast.LENGTH_SHORT).show()
                 }
             }
         }
