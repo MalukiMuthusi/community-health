@@ -89,8 +89,7 @@ class MainActivity : AppCompatActivity() {
                                 .setDefaultNumber("ke", "01508577")
                                 .build()
                         )
-                    )
-                    .build(),
+                    ).build(),
                 RC_SIGN_IN
             )
         }
