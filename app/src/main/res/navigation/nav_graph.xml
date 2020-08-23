@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_geoCategoryFragment_to_nationalDiseaseBurdenListFragment"
             app:destination="@id/nationalDiseaseBurdenListFragment" />
+        <action
+            android:id="@+id/action_geoCategoryFragment_to_countiesFragment"
+            app:destination="@id/countiesFragment" />
     </fragment>
     <fragment
         android:id="@+id/diseaseFragment"
@@ -46,5 +49,14 @@
         <action
             android:id="@+id/action_nationalDiseaseBurdenListFragment_to_diseaseFragment"
             app:destination="@id/diseaseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/countiesFragment"
+        android:name="codes.malukimuthusi.commhealth.counties.CountiesFragment"
+        android:label="counties_fragment"
+        tools:layout="@layout/counties_fragment" >
+        <action
+            android:id="@+id/action_countiesFragment_to_nationalDiseaseBurdenListFragment"
+            app:destination="@id/nationalDiseaseBurdenListFragment" />
     </fragment>
 </navigation>

@@ -36,6 +36,7 @@
     <string name="interactions">Interactions: </string>
     <string name="daily_interactions">Daily Interactions</string>
     <string name="monthly_interactions">Monthly Interactions</string>
+    <string name="counties">Counties</string>
 
     <string-array name="gender_array">
         <item>Female</item>

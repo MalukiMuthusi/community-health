@@ -29,3 +29,7 @@ data class PatientEntry(
     val preexistingCondition: MutableMap<String, Boolean>? = mutableMapOf(),
     @field:ServerTimestamp val timeCreated: Date? = null
 )
+
+data class County(
+    val name: String? = ""
+)
