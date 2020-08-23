@@ -31,6 +31,11 @@
     <string name="nyeri_referral_hospital">Nyeri Referral Hospital</string>
     <string name="notes">Notes</string>
     <string name="others">Others</string>
+    <string name="image_of_user">Image of user.</string>
+    <string name="weekly_interactions">Weekly Interactions</string>
+    <string name="interactions">Interactions: </string>
+    <string name="daily_interactions">Daily Interactions</string>
+    <string name="monthly_interactions">Monthly Interactions</string>
 
     <string-array name="gender_array">
         <item>Female</item>
