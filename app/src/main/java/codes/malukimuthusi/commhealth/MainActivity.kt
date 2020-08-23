@@ -80,18 +80,23 @@ class MainActivity : AppCompatActivity() {
         if (auth.currentUser == null) {
             startActivityForResult(
                 AuthUI.getInstance().createSignInIntentBuilder()
+                    .setLogo(R.drawable.logo)
                     .setAvailableProviders(
-                        listOf(
-                            AuthUI.IdpConfig.EmailBuilder().build(),
-                            AuthUI.IdpConfig.PhoneBuilder()
-                                .setWhitelistedCountries(listOf("+254"))
-                                .setDefaultNumber("ke", "0790497466")
-                                .build()
-                        )
+                        getAvailableProviders()
                     ).build(),
                 RC_SIGN_IN
             )
         }
+    }
+
+    private fun getAvailableProviders(): List<AuthUI.IdpConfig> {
+        return listOf(
+            AuthUI.IdpConfig.EmailBuilder().build(),
+            AuthUI.IdpConfig.PhoneBuilder()
+                .setWhitelistedCountries(listOf("+254"))
+                .setDefaultNumber("ke", "0790497466")
+                .build()
+        )
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
