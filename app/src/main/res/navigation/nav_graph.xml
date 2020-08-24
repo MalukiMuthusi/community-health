@@ -40,7 +40,11 @@
         android:id="@+id/recentActivityFragment"
         android:name="codes.malukimuthusi.commhealth.recentActivity.RecentActivityFragment"
         android:label="recent_activity_fragment"
-        tools:layout="@layout/recent_activity_fragment" />
+        tools:layout="@layout/recent_activity_fragment" >
+        <action
+            android:id="@+id/action_recentActivityFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nationalDiseaseBurdenListFragment"
         android:name="codes.malukimuthusi.commhealth.nationalDiseaseBurdenList.NationalDiseaseBurdenListFragment"
@@ -58,5 +62,14 @@
         <action
             android:id="@+id/action_countiesFragment_to_nationalDiseaseBurdenListFragment"
             app:destination="@id/nationalDiseaseBurdenListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="codes.malukimuthusi.commhealth.SignUpFragment"
+        android:label="sign_up_fragment"
+        tools:layout="@layout/sign_up_fragment" >
+        <action
+            android:id="@+id/action_signUpFragment_to_recentActivityFragment"
+            app:destination="@id/recentActivityFragment" />
     </fragment>
 </navigation>

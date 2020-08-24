@@ -37,6 +37,13 @@
     <string name="daily_interactions">Daily Interactions</string>
     <string name="monthly_interactions">Monthly Interactions</string>
     <string name="counties">Counties</string>
+    <string name="name">Name</string>
+    <string name="location">Location</string>
+    <string name="profile_image">Image of User</string>
+    <string name="select_image">Select Image</string>
+    <string name="submit">Submit</string>
+    <string name="chw_name">Rosemary Wanjala</string>
+    <string name="mombasa_kisauni">Mombasa, Kisauni</string>
 
     <string-array name="gender_array">
         <item>Female</item>

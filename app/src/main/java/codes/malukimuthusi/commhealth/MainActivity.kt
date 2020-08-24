@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import codes.malukimuthusi.commhealth.databinding.ActivityMainBinding
+import codes.malukimuthusi.commhealth.recentActivity.RecentActivityFragmentDirections
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.android.gms.auth.api.Auth
@@ -110,6 +111,8 @@ class MainActivity : AppCompatActivity() {
                 // show login success message
                 Toast.makeText(this, "You are logged in", Toast.LENGTH_SHORT).show()
 
+                findNavController(R.id.fragment).navigate(RecentActivityFragmentDirections.actionRecentActivityFragmentToSignUpFragment())
+
             } else {
                 if (response == null) {
                     // user cancelled
@@ -121,6 +124,9 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         const val RC_SIGN_IN = 8967
+        const val PROFILE_IMAGE_URI = "profile_image_uri"
+        const val SHARED_PREF_NAME = "name_of_chw"
+        const val SHARED_PREF_LOCATION = "location_of_chw"
     }
 
 }
