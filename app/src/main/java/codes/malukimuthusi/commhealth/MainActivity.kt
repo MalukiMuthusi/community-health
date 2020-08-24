@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
         if (auth.currentUser == null) {
             startActivityForResult(
                 AuthUI.getInstance().createSignInIntentBuilder()
-                    .setLogo(R.drawable.logo)
+                    .setLogo(R.drawable.ic_baseline_healing_24)
                     .setAvailableProviders(
                         getAvailableProviders()
                     ).build(),
