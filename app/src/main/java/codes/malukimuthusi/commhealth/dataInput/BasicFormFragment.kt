@@ -1,5 +1,7 @@
 package codes.malukimuthusi.commhealth.dataInput
 
+import android.content.Context
+import android.content.SharedPreferences
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.util.Log
@@ -10,6 +12,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import codes.malukimuthusi.commhealth.MainActivity
 import codes.malukimuthusi.commhealth.R
 import codes.malukimuthusi.commhealth.dataModels.PatientEntry
 import codes.malukimuthusi.commhealth.databinding.BasicFormFragmentBinding
@@ -25,6 +28,7 @@ class BasicFormFragment : Fragment() {
     private lateinit var viewModel: BasicFormViewModel
     lateinit var binding: BasicFormFragmentBinding
     lateinit var db: FirebaseFirestore
+    private lateinit var sharedPref: SharedPreferences
 
 
     override fun onCreateView(
@@ -33,6 +37,9 @@ class BasicFormFragment : Fragment() {
     ): View? {
         binding = BasicFormFragmentBinding.inflate(inflater, container, false)
         db = FirebaseFirestore.getInstance()
+        sharedPref = requireActivity().getPreferences(Context.MODE_PRIVATE)
+        binding.localityLayout.hint = sharedPref.getString(MainActivity.SHARED_PREF_LOCATION, "")
+
 
 
         ArrayAdapter.createFromResource(
@@ -56,7 +63,7 @@ class BasicFormFragment : Fragment() {
     private fun submit() {
         val age = binding.ageLayout.editText?.text.toString()
         val gender = binding.genderLayout.editText?.text.toString()
-        val locality = binding.localityLayout.editText?.text.toString()
+        val locality = sharedPref.getString(MainActivity.SHARED_PREF_LOCATION, "")
         val illnessDuration = binding.illnessDurationLayout.editText?.text.toString()
         val otherConditions = binding.othersTextLayout.editText?.text.toString()
         val preexistingConditions = mutableMapOf<String, Boolean>()
