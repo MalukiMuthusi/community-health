@@ -3,16 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".recentActivity.RecentActivityFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/image_profile"
@@ -82,6 +82,7 @@
 
                     <TextView
                         android:id="@+id/interactions"
+                        style="@style/TextAppearance.AppCompat.Body1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/margin_8dp"
@@ -93,6 +94,7 @@
 
                     <TextView
                         android:id="@+id/interactions_count"
+                        style="@style/TextAppearance.AppCompat.Body1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/margin_8dp"
@@ -132,6 +134,7 @@
 
                     <TextView
                         android:id="@+id/interactions_daily"
+                        style="@style/TextAppearance.AppCompat.Body1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/margin_8dp"
@@ -143,6 +146,7 @@
 
                     <TextView
                         android:id="@+id/daily_interactions_count"
+                        style="@style/TextAppearance.AppCompat.Body1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/margin_8dp"
@@ -161,6 +165,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_16dp"
+                android:padding="@dimen/margin_16dp"
                 android:paddingBottom="@dimen/margin_16dp"
                 app:cardElevation="@dimen/margin_16dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -184,6 +189,7 @@
 
                     <TextView
                         android:id="@+id/interactions_monthly"
+                        style="@style/TextAppearance.AppCompat.Body1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/margin_8dp"
@@ -195,6 +201,7 @@
 
                     <TextView
                         android:id="@+id/monthly_interactions_count"
+                        style="@style/TextAppearance.AppCompat.Body1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/margin_8dp"

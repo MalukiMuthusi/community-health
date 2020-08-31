@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">commhealth</string>
+    <string name="app_name">Afya Mtaani</string>
     <string name="select_geolocation_category">Select Geolocation</string>
     <string name="national_disease_burden">National Disease Burden</string>
     <string name="regional_disease_burden">Regional Disease Burden</string>
