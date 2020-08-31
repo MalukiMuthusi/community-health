@@ -26,18 +26,22 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-
         val topLevel = setOf(
             R.id.recentActivityFragment,
             R.id.geoCategoryFragment,
             R.id.basicFormFragment,
             R.id.callHelpFragment
         )
-        
+
         val appBarConfiguration = AppBarConfiguration(topLevel, binding.drawer)
 
         binding.bottomNavigation.setupWithNavController(findNavController(R.id.fragment_nav))
         binding.bottomNavigation.setupWithNavController(findNavController(R.id.fragment_nav))
+
+        binding.topAppBar.setupWithNavController(
+            findNavController(R.id.fragment_nav),
+            appBarConfiguration
+        )
 
         auth = FirebaseAuth.getInstance()
 

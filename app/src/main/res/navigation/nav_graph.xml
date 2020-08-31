@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/geoCategoryFragment"
         android:name="codes.malukimuthusi.commhealth.geoCategory.GeoCategoryFragment"
-        android:label="geo_category_fragment"
-        tools:layout="@layout/geo_category_fragment" >
+        android:label="Select Category"
+        tools:layout="@layout/geo_category_fragment">
         <action
             android:id="@+id/action_geoCategoryFragment_to_nationalDiseaseBurdenListFragment"
             app:destination="@id/nationalDiseaseBurdenListFragment" />
@@ -20,13 +20,13 @@
     <fragment
         android:id="@+id/diseaseFragment"
         android:name="codes.malukimuthusi.commhealth.diseaseView.DiseaseFragment"
-        android:label="disease_fragment"
+        android:label="Disease Information"
         tools:layout="@layout/disease_fragment" />
     <fragment
         android:id="@+id/basicFormFragment"
         android:name="codes.malukimuthusi.commhealth.dataInput.BasicFormFragment"
-        android:label="basic_form_fragment"
-        tools:layout="@layout/basic_form_fragment" >
+        android:label="Data Form"
+        tools:layout="@layout/basic_form_fragment">
         <action
             android:id="@+id/action_basicFormFragment_self"
             app:destination="@id/basicFormFragment" />
@@ -34,13 +34,13 @@
     <fragment
         android:id="@+id/callHelpFragment"
         android:name="codes.malukimuthusi.commhealth.call.CallHelpFragment"
-        android:label="call_help_fragment"
+        android:label="Referral Numbers"
         tools:layout="@layout/call_help_fragment" />
     <fragment
         android:id="@+id/recentActivityFragment"
         android:name="codes.malukimuthusi.commhealth.recentActivity.RecentActivityFragment"
-        android:label="recent_activity_fragment"
-        tools:layout="@layout/recent_activity_fragment" >
+        android:label="Interactions"
+        tools:layout="@layout/recent_activity_fragment">
         <action
             android:id="@+id/action_recentActivityFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
@@ -48,8 +48,8 @@
     <fragment
         android:id="@+id/nationalDiseaseBurdenListFragment"
         android:name="codes.malukimuthusi.commhealth.nationalDiseaseBurdenList.NationalDiseaseBurdenListFragment"
-        android:label="national_disease_burden_list_fragment"
-        tools:layout="@layout/national_disease_burden_list_fragment" >
+        android:label="National Disease Burden"
+        tools:layout="@layout/national_disease_burden_list_fragment">
         <action
             android:id="@+id/action_nationalDiseaseBurdenListFragment_to_diseaseFragment"
             app:destination="@id/diseaseFragment" />
@@ -57,8 +57,8 @@
     <fragment
         android:id="@+id/countiesFragment"
         android:name="codes.malukimuthusi.commhealth.counties.CountiesFragment"
-        android:label="counties_fragment"
-        tools:layout="@layout/counties_fragment" >
+        android:label="Counties"
+        tools:layout="@layout/counties_fragment">
         <action
             android:id="@+id/action_countiesFragment_to_nationalDiseaseBurdenListFragment"
             app:destination="@id/nationalDiseaseBurdenListFragment" />
@@ -66,8 +66,8 @@
     <fragment
         android:id="@+id/signUpFragment"
         android:name="codes.malukimuthusi.commhealth.SignUpFragment"
-        android:label="sign_up_fragment"
-        tools:layout="@layout/sign_up_fragment" >
+        android:label="Sign Up"
+        tools:layout="@layout/sign_up_fragment">
         <action
             android:id="@+id/action_signUpFragment_to_recentActivityFragment"
             app:destination="@id/recentActivityFragment" />
