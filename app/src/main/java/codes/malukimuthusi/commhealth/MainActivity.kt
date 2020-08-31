@@ -2,11 +2,10 @@ package codes.malukimuthusi.commhealth
 
 import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import codes.malukimuthusi.commhealth.databinding.ActivityMainBinding
@@ -15,6 +14,7 @@ import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -50,6 +50,22 @@ class MainActivity : AppCompatActivity() {
         bottomItemReselected()
 
         login()
+
+        binding.navigation.setNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.menu_logout -> {
+
+                    AuthUI.getInstance()
+                        .signOut(this)
+                        .addOnCompleteListener { // user is now signed out
+                            login()
+                        }
+
+                    return@setNavigationItemSelectedListener true
+                }
+                else -> return@setNavigationItemSelectedListener false
+            }
+        }
 
     }
 
