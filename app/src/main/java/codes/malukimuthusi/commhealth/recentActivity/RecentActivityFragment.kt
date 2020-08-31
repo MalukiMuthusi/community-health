@@ -66,7 +66,7 @@ class RecentActivityFragment : Fragment() {
             .get()
             .addOnSuccessListener { documents ->
                 val count = documents.size()
-                binding.interactionsCount.text = count.toString()
+                binding.weeklyInteractionsCount.text = count.toString()
             }
     }
 

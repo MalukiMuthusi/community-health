@@ -44,6 +44,7 @@
     <string name="submit">Submit</string>
     <string name="chw_name">Rosemary Wanjala</string>
     <string name="mombasa_kisauni">Mombasa, Kisauni</string>
+    <string name="help_lines">Help Lines</string>
 
     <string-array name="gender_array">
         <item>Female</item>

@@ -12,7 +12,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="@dimen/margin_16dp">
 
             <ImageView
                 android:id="@+id/image_profile"
@@ -81,19 +82,19 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/interactions"
+                        android:id="@+id/daily_interactions_text"
                         style="@style/TextAppearance.AppCompat.Body1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/margin_8dp"
                         android:text="@string/interactions"
-                        app:layout_constraintEnd_toStartOf="@id/interactions_count"
+                        app:layout_constraintEnd_toStartOf="@id/daily_interactions_count"
                         app:layout_constraintHorizontal_chainStyle="packed"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/weekly_report_title" />
 
                     <TextView
-                        android:id="@+id/interactions_count"
+                        android:id="@+id/daily_interactions_count"
                         style="@style/TextAppearance.AppCompat.Body1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -102,8 +103,8 @@
                         android:text="100"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_chainStyle="packed"
-                        app:layout_constraintStart_toEndOf="@id/interactions"
-                        app:layout_constraintTop_toTopOf="@id/interactions" />
+                        app:layout_constraintStart_toEndOf="@id/daily_interactions_text"
+                        app:layout_constraintTop_toTopOf="@id/daily_interactions_text" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -139,13 +140,13 @@
                         android:layout_height="wrap_content"
                         android:padding="@dimen/margin_8dp"
                         android:text="@string/interactions"
-                        app:layout_constraintEnd_toStartOf="@id/daily_interactions_count"
+                        app:layout_constraintEnd_toStartOf="@id/weekly_interactions_count"
                         app:layout_constraintHorizontal_chainStyle="packed"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/daily_interactions_title" />
 
                     <TextView
-                        android:id="@+id/daily_interactions_count"
+                        android:id="@+id/weekly_interactions_count"
                         style="@style/TextAppearance.AppCompat.Body1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
