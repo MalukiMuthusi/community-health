@@ -6,15 +6,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import codes.malukimuthusi.commhealth.databinding.ActivityMainBinding
 import codes.malukimuthusi.commhealth.recentActivity.RecentActivityFragmentDirections
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
-import com.google.android.gms.auth.api.Auth
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
-import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -25,7 +25,19 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.bottomNavigation.setupWithNavController(findNavController(R.id.fragment))
+
+
+        val topLevel = setOf(
+            R.id.recentActivityFragment,
+            R.id.geoCategoryFragment,
+            R.id.basicFormFragment,
+            R.id.callHelpFragment
+        )
+        
+        val appBarConfiguration = AppBarConfiguration(topLevel, binding.drawer)
+
+        binding.bottomNavigation.setupWithNavController(findNavController(R.id.fragment_nav))
+        binding.bottomNavigation.setupWithNavController(findNavController(R.id.fragment_nav))
 
         auth = FirebaseAuth.getInstance()
 
@@ -111,7 +123,7 @@ class MainActivity : AppCompatActivity() {
                 // show login success message
                 Toast.makeText(this, "You are logged in", Toast.LENGTH_SHORT).show()
 
-                findNavController(R.id.fragment).navigate(RecentActivityFragmentDirections.actionRecentActivityFragmentToSignUpFragment())
+                findNavController(R.id.fragment_nav).navigate(RecentActivityFragmentDirections.actionRecentActivityFragmentToSignUpFragment())
 
             } else {
                 if (response == null) {

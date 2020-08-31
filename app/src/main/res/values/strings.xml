@@ -45,6 +45,9 @@
     <string name="chw_name">Rosemary Wanjala</string>
     <string name="mombasa_kisauni">Mombasa, Kisauni</string>
     <string name="help_lines">Help Lines</string>
+    <string name="maluki_muthusi">Maluki Muthusi</string>
+    <string name="logout">Logout</string>
+    <string name="download">Download</string>
 
     <string-array name="gender_array">
         <item>Female</item>

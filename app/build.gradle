@@ -94,5 +94,8 @@ dependencies {
 
     implementation "androidx.palette:palette-ktx:1.0.0"
 
+    // circular image
+    implementation 'com.mikhaellopez:circularimageview:4.2.0'
+
 
 }
