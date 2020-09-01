@@ -16,6 +16,7 @@ import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.firebase.ui.firestore.SnapshotParser
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 
 class DiseaseBurdenCountyFragment : Fragment() {
 
@@ -36,6 +37,7 @@ class DiseaseBurdenCountyFragment : Fragment() {
 
         db = FirebaseFirestore.getInstance()
         val query = db.collection("fact-sheets")
+            .orderBy("name", Query.Direction.DESCENDING)
             .limit(5)
 
         val firestoreRecyclerOptions = FirestoreRecyclerOptions.Builder<Disease>()
