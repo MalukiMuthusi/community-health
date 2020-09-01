@@ -18,7 +18,7 @@ class CountyViewHolder private constructor(
 
             viewModel.clickedCounty = county
             binding.root.findNavController()
-                .navigate(CountiesFragmentDirections.actionCountiesFragmentToNationalDiseaseBurdenListFragment())
+                .navigate(CountiesFragmentDirections.actionCountiesFragmentToDiseaseBurdenCountyFragment())
         }
     }
 

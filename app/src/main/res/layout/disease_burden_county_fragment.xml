@@ -6,12 +6,13 @@
     android:orientation="vertical"
     tools:context=".nationalDiseaseBurdenList.NationalDiseaseBurdenListFragment">
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/title"
         style="@style/TextAppearance.MaterialComponents.Headline4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/top_national_disease_burden"
+        android:layout_margin="@dimen/margin_16dp"
+        android:text="@string/county_disease_burden"
         android:textAlignment="center" />
 
     <androidx.recyclerview.widget.RecyclerView

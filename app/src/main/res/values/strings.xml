@@ -48,6 +48,8 @@
     <string name="maluki_muthusi">Maluki Muthusi</string>
     <string name="logout">Logout</string>
     <string name="download">Download</string>
+    <string name="top_national_disease_burden">Top National Disease Burden</string>
+    <string name="county_disease_burden">County Disease Burden</string>
 
     <string-array name="gender_array">
         <item>Female</item>
